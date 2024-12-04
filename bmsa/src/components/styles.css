@@ -242,6 +242,83 @@
 }
 
 
+/* Container for the entire trending searches section */
+.trending-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 -2rem; 
+  position: relative;
+  top: 4rem;
+  bottom: 2rem;
+}
+
+.trending-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: left; 
+  font-family: centuar;
+}
+
+/* Grid layout for the cards */
+.trending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px; /* Space between cards */
+  justify-content: space-between; /* Ensure cards stretch to occupy full width */
+}
+
+/* Individual card styles */
+.trending-card {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  width: 80%;
+  height: 85%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trending-card:hover {
+  transform: translateY(-5px); /* Add hover effect for better interaction */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Card title */
+.trending-card h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ff4c4c;
+  margin: 5px 0;
+  font-family: centuar;
+
+  
+}
+
+/* Card category */
+.trending-card p {
+  font-size: 12px;
+  color: #777;
+  font-family: centar;
+
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .trending-container {
+    padding: 0 1.5rem; /* Reduce padding for smaller screens */
+  }
+
+  .trending-title {
+    text-align: center; /* Center the title for smaller devices */
+  }
+
+  .trending-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust card size */
+  }
+}
+
 
 
 .footer {

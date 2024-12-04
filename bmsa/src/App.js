@@ -14,6 +14,7 @@ import PapularEvents from "./components/PapularEvents";
 import LatestPlay from "./components/LatestPlayes";
 import LatestPlayes from "./components/LatestPlayes";
 import Sports from "./components/Sports";
+import TrendingSearches from "./components/TrendingSearches";
 
 
 const App = () => {
@@ -47,7 +48,8 @@ const App = () => {
      <AdCarousel />
 
      <Sports/>
-     
+     <TrendingSearches/>
+
 
 
       <Footer />
