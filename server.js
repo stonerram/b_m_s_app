@@ -15,6 +15,7 @@ const papularEventsRoutes = require('./routes/papularEventsRoutes');
 const latestPlayRoutes = require('./routes/latestPlayRoutes');
 const sportsWayRoutes = require('./routes/sportsWayRoutes');
 const trendingRoutes = require('./routes/trendingRoutes');
+const movie1Router = require('./routes/movie1Router');
 
 
 
@@ -33,6 +34,7 @@ app.use('/api', papularEventsRoutes);
 app.use('/api', latestPlayRoutes);
 app.use('/api', sportsWayRoutes);
 app .use('/api', trendingRoutes);
+app.use('/api',movie1Router);
 
 
 const mongoURI = "mongodb+srv://stonerram488:114u181m@cluster0.fo9otxm.mongodb.net/bmsa?retryWrites=true&w=majority&appName=Cluster0"; // Replace with your MongoDB URI

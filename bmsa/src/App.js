@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import MenuBar from "./components/MenuBar";
@@ -15,6 +16,9 @@ import LatestPlay from "./components/LatestPlayes";
 import LatestPlayes from "./components/LatestPlayes";
 import Sports from "./components/Sports";
 import TrendingSearches from "./components/TrendingSearches";
+import MovieDetails from "./components/MovieDetails";
+import Movies from "./components/Movies";
+import About from "./components/About";
 
 
 const App = () => {
@@ -23,7 +27,10 @@ const App = () => {
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
   return (
-    <>
+    <Router>
+      <Routes>
+        <Route path="/" element = {
+          <>
       <Header toggleSidebar={toggleSidebar} />
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <MenuBar />
@@ -37,23 +44,38 @@ const App = () => {
      <MusicStudios/>
      <OutDoorEvents/>
      <br/><br/><br/><br/>     
-
-     <AdCarousel />
-     
+      <AdCarousel />
      <LaughterTherapy/>
      <PapularEvents/>
      <LatestPlayes/>
      <br/><br/><br/><br/>     
-
      <AdCarousel />
-
      <Sports/>
      <TrendingSearches/>
-
-
-
       <Footer />
     </>
+        }/>
+    <Route path="/movies" element={
+      <>
+      <AdCarousel />
+      <br/>
+      <Movies />
+      <br/><br/>
+      <About/>
+      <Footer/>
+      </>
+    } />
+
+    <Route path="/movie/:id" element={
+      <>
+      <MovieDetails /> 
+      <br/> 
+      <RecommendedMovies />     
+      <Footer /> 
+      </>
+    } />
+    </Routes>
+    </Router> 
   );
 };
 
